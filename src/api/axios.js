@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000', // Update this to your server's production URL when deploying
+  baseURL: 'https://codenest-blog-backend.onrender.com', // Update this to your server's production URL when deploying
   headers: {
     'Content-Type': 'application/json'
   }
