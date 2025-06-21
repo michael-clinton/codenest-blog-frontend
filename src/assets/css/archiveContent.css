@@ -1,0 +1,45 @@
+/* ArchiveContent.css */
+
+.button-read {
+  font-size: 0.875rem;
+  color: #007bff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.button-read:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.single-recent-blog-post p {
+  margin-bottom: 0;
+}
+
+/* Ensures text + Read More are in one line */
+.single-line-preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Styling for Read More link */
+.button-read {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.button-read:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+
+

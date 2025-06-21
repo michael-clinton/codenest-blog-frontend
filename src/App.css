@@ -1,0 +1,68 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* You can put this in your global CSS file */
+.custom-swal-popup {
+  width: 200px !important;  /* Adjust as needed */
+  height: auto;             /* Or a fixed height like 300px */
+  padding: 1.5rem !important;
+}
+
+.custom-swal-title {
+  font-size: 1.5rem;        /* Optional: make title smaller/larger */
+}
+
+.custom-swal-content {
+  font-size: 1rem;          /* Optional: adjust content font size */
+}
+
+
+@media (max-width: 480px) {
+  .swal2-popup {
+    width: 95% !important;
+    font-size: 16px !important;
+  }
+}
+
