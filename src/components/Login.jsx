@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import axiosInstance from "../api/axios";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setErrorMsg('');
 
         try {
             const response = await axiosInstance.post('/api/auth/login', {
@@ -29,6 +31,8 @@ const Login = () => {
             }
         } catch (error) {
             setErrorMsg(error.response?.data?.error || 'Login failed. Please try again.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -58,7 +62,9 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary w-100">Login</button>
+                    <button type="submit" className="btn btn-primary w-100" disabled={loading}>
+                        {loading ? 'Logging in...' : 'Login'}
+                    </button>
                 </form>
             </div>
         </div>
